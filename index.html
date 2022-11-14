@@ -1,12 +1,11 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
 
 <head>
-    <title>Tuan Nguyen Effect</title>
+    <title>Heart Effect</title>
     <meta NAME="Generator" CONTENT="EditPlus">
     <meta NAME="Author" CONTENT="Tuan Nguyen">
-    <meta NAME="Keywords" CONTENT="">
-    <meta NAME="Description" CONTENT="">
+    <meta NAME="Keywords" CONTENT="Heart Effect">
+    <meta NAME="Description" CONTENT="Heart Effect">
     <style>
         html,
         body {
@@ -14,12 +13,99 @@
             padding: 0;
             margin: 0;
             background: #000;
+            position: relative;
+            display: flex;
+            justify-content: flex-end;
+            flex-direction: column;
         }
 
         canvas {
             position: absolute;
             width: 100%;
             height: 100%;
+        }
+
+        .logo.is-animation {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .logo.is-animation span {
+            display: inline-block;
+            color: #ff69b4;
+            font-size: 40px;
+            text-transform: uppercase;
+            animation: wave-text 1s ease-in-out;
+        }
+
+        .logo.is-animation span:nth-of-type(1) {
+            animation-delay: 0.0s;
+        }
+
+        .logo.is-animation span:nth-of-type(2) {
+            animation-delay: 0.1s;
+        }
+
+        .logo.is-animation span:nth-of-type(3) {
+            animation-delay: 0.2s;
+        }
+
+        .logo.is-animation span:nth-of-type(4) {
+            animation-delay: 0.3s;
+        }
+
+        .logo.is-animation span:nth-of-type(5) {
+            animation-delay: 0.4s;
+        }
+
+        .logo.is-animation span:nth-of-type(6) {
+            animation-delay: 0.5s;
+        }
+
+        .logo.is-animation span:nth-of-type(7) {
+            animation-delay: 0.6s;
+        }
+
+        .logo.is-animation span:nth-of-type(8) {
+            animation-delay: 0.7s;
+        }
+
+        .logo.is-animation span:nth-of-type(9) {
+            animation-delay: 0.8s;
+        }
+
+        .logo.is-animation span:nth-of-type(10) {
+            animation-delay: 0.9s;
+        }
+
+        .logo.is-animation span:nth-of-type(11) {
+            animation-delay: 1s;
+        }
+
+        .logo.is-animation span:nth-of-type(12) {
+            animation-delay: 1.1s;
+        }
+
+        .logo.is-animation span:nth-of-type(13) {
+            animation-delay: 1.2s;
+        }
+
+        @keyframes wave-text {
+            00% {
+                transform: translateY(0em);
+            }
+            60% {
+                transform: translateY(-0.6em);
+            }
+            100% {
+                transform: translateY(0em);
+            }
+        }
+
+        #audioID {
+            position: absolute;
+            left: 16px;
+            bottom: 16px;
         }
     </style>
 </head>
@@ -32,11 +118,11 @@
         */
         var settings = {
             particles: {
-                length: 500, // maximum amount of particles
-                duration: 2, // particle duration in sec
+                length: 1000, // maximum amount of particles
+                duration: 2.5, // particle duration in sec
                 velocity: 100, // particle velocity in pixels/sec
-                effect: -0.75, // play with this for a nice effect
-                size: 30, // particle size in pixels
+                effect: -0.5, // play with this for a nice effect
+                size: 32, // particle size in pixels
             },
         };
         /*
@@ -229,7 +315,7 @@
 
                 context.closePath();
                 // create the fill
-                context.fillStyle = '#ea80b0';
+                context.fillStyle = '#ff69b4';
                 context.fill();
                 // create the image
                 var image = new Image();
@@ -281,6 +367,30 @@
             }, 10);
         })(document.getElementById('pinkboard'));
     </script>
+    <div class="logo is-animation">
+        <span>T</span>
+        <span>R</span>
+        <span>Ầ</span>
+        <span>N</span>
+        <span style="margin-left: 8px">T</span>
+        <span>H</span>
+        <span>Ị</span>
+        <span style="margin-left: 8px">T</span>
+        <span>H</span>
+        <span>Ú</span>
+        <span>Y</span>
+        <span style="margin-left: 8px">V</span>
+        <span>Y</span>
+    </div>
+    <div>
+        <p style="color: #fff; text-align: right; margin-right: 16px;">Make by Tuan Nguyen</p>
+    </div>
+    <div id="audioID">
+        <p style="color: #fff;">Nhấn vào để phát nhạc nhé</p>
+        <audio controls loop>
+            <source src="./assets/music.mp3" type="audio/mpeg">
+        </audio>
+    </div>
 </body>
 
 </html>
